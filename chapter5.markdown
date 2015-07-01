@@ -666,7 +666,7 @@ MYAPP.utilities.array = (function () {
 ### 实现构造函数
 
 最后，我们来实现`Sandbox()`构造函数（你可能会很自然地想将这类构造函数命名为对你的类库或者应用有意义的名字）：
-
+```javascript
 	function Sandbox() {
 			// turning arguments into an array
 		var args = Array.prototype.slice.call(arguments),
@@ -713,7 +713,7 @@ MYAPP.utilities.array = (function () {
 			return this.name;
 		}
 	};
-
+```
 这个实现中的一些关键点：
 
 - 有一个检查`this`是否是`Sandbox`实例的过程，如果不是（也就是调用`Sandbox()`时没有加`new`），我们将这个函数作为构造函数再调用一次。
